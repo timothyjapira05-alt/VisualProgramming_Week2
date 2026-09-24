@@ -29,7 +29,7 @@ fun soal1TugasView(
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight()
-            .background(Color.Blue)
+            .background(Color(0xFFFF69B4))
     ) {
         Row(
             modifier = Modifier
@@ -46,19 +46,49 @@ fun soal1TugasView(
         }
         Row(
             modifier = Modifier
-                .padding(20.dp)
+                .padding(horizontal = 30.dp)
+                .padding(bottom = 20.dp)
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
             Image(
                 painter = painterResource(R.drawable.screenshot_2026_09_24_202254),
                 "foto",
-                modifier = Modifier.size(400.dp),
-                
+                modifier = Modifier.size(300.dp),
+
+            )
+        }
+        Column(modifier = Modifier.weight(1f)) {
+            Row() {
+                Text(
+                    "Hooligan",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 30.sp,
+                )
+            }
+            Row() {
+                Text(
+                    "BTS", fontWeight = FontWeight.Bold, fontSize = 15.sp,
+                )
+            }
+        }
+        Column(
+            modifier = Modifier.weight(1f), horizontalAlignment = Alignment.End
+        ) {
+            Text(
+                "❤️", color = Color.White
             )
         }
     }
+    Row(modifier = Modifier.padding(horizontal = 20.dp)) {
+        Text(
+            "-------------------------------------------------------------------------------------",
+            color = Color.White
+        )
+
+    }
 }
+
 
 
 @Preview(showBackground = true, showSystemUi = true)
