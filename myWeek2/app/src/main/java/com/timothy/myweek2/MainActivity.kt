@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.layout.ContentScale
@@ -101,6 +102,29 @@ fun soal1TugasView(
         ) {
             Text("0:12")
             Text("-2:12")
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 20.dp),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                "<|",
+                fontSize = 25.sp
+            )
+
+            Text(
+                "(||)",
+                fontSize = 35.sp,
+                modifier = Modifier.padding(horizontal = 40.dp)
+            )
+
+            Text(
+                "|>",
+                fontSize = 25.sp
+            )
         }
     }
 }
