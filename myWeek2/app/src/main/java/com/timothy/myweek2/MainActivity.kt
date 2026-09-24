@@ -24,7 +24,7 @@ import androidx.compose.ui.layout.ContentScale
 @Composable
 fun soal1TugasView(
     modifier: Modifier = Modifier.fillMaxSize()
-){
+) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -33,7 +33,6 @@ fun soal1TugasView(
     ) {
         Row(
             modifier = Modifier
-                .weight(1f)
                 .padding(20.dp)
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -42,7 +41,6 @@ fun soal1TugasView(
             Text("v", fontWeight = FontWeight.Bold, fontSize = 24.sp)
             Text("Liked Songs", fontWeight = FontWeight.Bold, fontSize = 24.sp)
             Text("...", fontWeight = FontWeight.Bold, fontSize = 24.sp)
-
         }
         Row(
             modifier = Modifier
@@ -56,43 +54,61 @@ fun soal1TugasView(
                 "foto",
                 modifier = Modifier.size(300.dp),
 
-            )
+                )
         }
-        Column(modifier = Modifier.weight(1f)) {
-            Row() {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+
+            Column {
                 Text(
                     "Hooligan",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 30.sp,
+                    fontSize = 30.sp
                 )
-            }
-            Row() {
+
                 Text(
-                    "BTS", fontWeight = FontWeight.Bold, fontSize = 15.sp,
+                    "BTS",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp
                 )
             }
-        }
-        Column(
-            modifier = Modifier.weight(1f), horizontalAlignment = Alignment.End
-        ) {
+
             Text(
-                "❤️", color = Color.White
+                "❤️",
+                fontSize = 25.sp
             )
         }
-    }
-    Row(modifier = Modifier.padding(horizontal = 20.dp)) {
-        Text(
-            "-------------------------------------------------------------------------------------",
-            color = Color.White
-        )
-
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp)
+                .padding(top = 15.dp)
+        ) {
+            Text(
+                "-------------------------------------------------------------------------------------"
+            )
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp)
+                .padding(top = 5.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text("0:12")
+            Text("-2:12")
+        }
     }
 }
 
 
 
-@Preview(showBackground = true, showSystemUi = true)
+    @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun soal1TugasPreview(){
-    soal1TugasView()
-}
+fun soal1TugasPreview() {
+        soal1TugasView()
+    }
