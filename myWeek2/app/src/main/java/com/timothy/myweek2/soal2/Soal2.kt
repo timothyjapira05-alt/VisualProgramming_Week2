@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -220,6 +222,17 @@ fun Soal2View() {
                                 unfocusedPlaceholderColor = Color.Gray
                             )
                         )
+                    }
+                    Row (horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth().padding(top=15.dp)) {
+                        FloatingActionButton (
+                            onClick = {},
+                            shape = RoundedCornerShape(15.dp),
+                            modifier = Modifier.size(60.dp),
+                            containerColor = Color(0xFFD9ECFF),
+                            contentColor = Color.Black
+                        ) {
+                            Text("+", fontSize = 40.sp, textAlign = TextAlign.Center)
+                        }
                     }
                 }
             }
